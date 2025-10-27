@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Permintaan Maaf Interaktif</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffe4e9; /* Pink lembut */
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #333;
+      margin-bottom: 40px;
+    }
+    .btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+    }
+    #maafinBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #enggakBtn {
+      background-color: #f44336;
+      color: white;
+    }
+    #message {
+      margin-top: 40px;
+      font-size: 22px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Aku minta maaf ya🥺💖</h1>
+
+  <button id="maafinBtn" class="btn" onclick="maafin()">Maafin💖</button>
+  <button id="enggakBtn" class="btn" onclick="enggak()">Enggak😠</button>
+
+  <div id="message"></div>
+
+  <script>
+    let maafinBtn = document.getElementById("maafinBtn");
+    let enggakBtn = document.getElementById("enggakBtn");
+    let message = document.getElementById("message");
+    let judul = document.getElementById("judul");
+    let size = 1;
+
+    function enggak() {
+      size += 0.2;
+      maafinBtn.style.transform = `scale(${size})`;
+    }
+
+    function maafin() {
+      judul.style.display = "none";
+      maafinBtn.style.display = "none";
+      enggakBtn.style.display = "none";
+      message.innerHTML = "🎉 Yey! Makasih udaa maafin aku💖 <br>Janji gak ngulangin lagii 💖💫";
+    }
+  </script>
+
+</body>
+</html>
